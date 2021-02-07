@@ -4,6 +4,7 @@ package appiumBasics;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,7 @@ public class RunWebApplicationAndroidEmulator {
 
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps);
         driver.get("https://google.com");
+        driver.findElement(By.name("q")).sendKeys("mednine");
 
     }
 }
